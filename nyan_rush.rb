@@ -271,7 +271,7 @@ class NyanRush
     if @score != 1
       "Nyanyanyanyan!!! %d walls." % @score
     else
-      "Nyanyanyanyan!!! %d wall."
+      "Nyanyanyanyan!!! 1 wall."
     end
   end
 

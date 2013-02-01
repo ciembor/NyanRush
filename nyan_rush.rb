@@ -250,7 +250,7 @@ class NyanRush
     if @wall_counter > @width
       @wall_counter = 0
       @score += 1
-      @interval -= @interval / 10
+      @interval -= 0.01/@score
       @wall = Wall.new(@width, @height)
     end
     check_collision

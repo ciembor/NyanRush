@@ -13,7 +13,7 @@ class NyanRush
 
     def initialize(strings, x, y)
       @data = []
-      if strings.respond_to? :length
+      if strings.respond_to? :length and strings[0].respond_to? :length
         @height = strings.length
         @width = strings[0].length
         @x = x
@@ -196,6 +196,7 @@ class NyanRush
   ###########################################################
 
   def initialize(width, height)
+    @interval = 0.05
     @wall_counter = 0
     @score = 0
     @width = width
@@ -219,7 +220,7 @@ class NyanRush
   end
 
   def sleep_time
-    0.008
+    @interval
   end
 
   def objects
@@ -249,6 +250,7 @@ class NyanRush
     if @wall_counter > @width
       @wall_counter = 0
       @score += 1
+      @interval -= @interval / 10
       @wall = Wall.new(@width, @height)
     end
     check_collision

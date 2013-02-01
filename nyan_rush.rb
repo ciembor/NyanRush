@@ -39,11 +39,7 @@ class NyanRush
     end
 
     def clear
-      @data.each do |primitive|
-        if primitive.x < 1
-          @data.delete(primitive)
-        end
-      end
+      @data = @data.select { |primitive| primitive.x >= 0}
     end
 
     def append(chars, colors, x, y)

@@ -1,6 +1,9 @@
 NyanRush
 ========
 
+##Screencast
+###http://ascii.io/a/1955
+
 ##Installation
 `git clone https://github.com/ciembor/NyanRush.git`
 

@@ -12,8 +12,8 @@ class NyanRush
   class Matrix
 
     def initialize(strings, x, y)
-      @data = Array.new
-      begin
+      @data = []
+      if strings.respond_to? :length
         @height = strings.length
         @width = strings[0].length
         @x = x
@@ -27,7 +27,7 @@ class NyanRush
             j += 1
           end
         end
-      rescue; end
+      end
     end
 
     def translate(x, y)

@@ -173,7 +173,7 @@ class NyanRush
     end
 
     def generate
-      @doors = Random.new.rand(0...(@scr_height-5))
+      @doors = Random.new.rand(0..(@scr_height-4))
       for i in 0...@doors
         @top_pattern.push("#")
       end
